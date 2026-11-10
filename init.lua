@@ -20,6 +20,12 @@ vim.pack.add({
   "https://github.com/hrsh7th/cmp-nvim-lsp", -- feeds LSP results into nvim-cmp
 })
 
+-- Pure black background: bg1 is the editor, bg0 is floats, sidebars and the statusline.
+require("nightfox").setup({
+  palettes = {
+    carbonfox = { bg0 = "#000000", bg1 = "#000000" },
+  },
+})
 vim.cmd.colorscheme("carbonfox")
 
 -- LSP: servers are installed by Mason and configured by nvim-lspconfig.
